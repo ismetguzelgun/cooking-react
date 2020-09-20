@@ -15,8 +15,16 @@ const myComponent = render(
 // After 3 seconds, set the state of "myComponent",
 // which causes it to re-render itself.
 setTimeout(() => {
-  myComponent.setState({
+    myComponent.setState({
     heading: 'React Awesomesauce',
     content: 'Done!'
   });
 }, 3000);
+
+
+setTimeout(() => {
+  myComponent.setState({
+    heading: 'React Awesomesauce really',
+    content: 'gubara!'
+  });
+}, 10000);

@@ -20,3 +20,19 @@ properties, it's often a parent component that decides when to render the JSX. T
 component doesn't actually know how to re-render itself. As you'll see throughout this
 book, this type of top-down flow is easier to predict than state that changes all over the
 place.
+
+#Initial component state
+
+The initial state of a component isn't actually required, but if your component uses state, it
+should be set. This is because if the component expects certain state properties to be there
+and they aren't, then the component will either fail or render something unexpected.
+Thankfully, it's easy to set the initial component state.
+
+The initial state of a component should always be an object with one or more properties.
+
+#Merging the component state
+Instead of passing a new
+object to merge into the existing state, you can pass a function.
+
+You can use the spread operator to do this
+(...state).
